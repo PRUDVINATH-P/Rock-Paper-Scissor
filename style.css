@@ -1,0 +1,160 @@
+:root{
+  --dark : linear-gradient(150deg, #1c1e30, #28223c, #372446, #48254b, #5a264c, #6d2647, #7f273c, #8f2a2a);
+  --bgradient : linear-gradient(45deg, #ba0d3c, #d0322a, #e24f00, #f16d00, #fb8a00, #ffa900, #ffc700, #ffe603);
+  --sgradient1 : radial-gradient(circle at 100% 10%, #f2db6b, #f6cb5d, #fbba53, #fea84d, #ff954b, #ff824c, #ff6d51, #ff5757);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: var(--sgradient1);
+}
+
+.h1{
+  font-size: 40px;
+  text-align: center;
+  background: var(--dark);
+  color: transparent;
+  background-clip: text;
+  margin-top: 30px;
+}
+
+#heading1{
+  font-size: 40px;
+  text-align: center;
+  background: var(--dark);
+  color: transparent;
+  background-clip: text;
+  margin-top: 30px;
+}
+
+.ur-cards{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6{
+  margin-top: 20px;
+  max-width: 300px;
+  width: 25%;
+  height: 80%;
+  background: var(--bgradient);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  transition: all .5s ease-in-out;
+}
+
+#card4, #card5, #card6{
+  display: none;
+}
+
+#card1:hover, #card2:hover, #card3:hover{
+  cursor: pointer;
+  height: 75%;
+  width: 30%;
+}
+
+img{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+div > p{
+  font-size: 2.5rem;
+  color: transparent;
+  background: var(--dark);
+  background-clip: text;
+}
+
+.com-cards{
+  display: none;
+}
+
+#headings{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-evenly;
+  display: none;
+}
+
+#heading2, #heading3{
+  font-size: 2.5rem;
+  color: transparent;
+  background: var(--dark);
+  background-clip: text;
+  display: none;
+}
+
+#heading4{
+  font-size: 40px;
+  text-align: center;
+  color: transparent;
+  background: var(--dark);
+  background-clip: text;
+  display: block;
+
+}
+
+button{
+  
+  background-color: var(--dark);
+  width: 130px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: rgb(233, 16, 16);
+}
+
+button:hover{
+  background-color: ;
+  color: var(--dark);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#end{
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.logo{
+  margin: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+.logoo{
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.text{
+  font-size: 1.4rem;
+  background: var(--dark);
+  background-clip: text;
+  color: transparent;
+}
