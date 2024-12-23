@@ -1,161 +1,91 @@
-const card1 = document.getElementById('card1');
-const card2 = document.getElementById('card2');
-const card3 = document.getElementById('card3');
-const card4 = document.getElementById('card4');
-const card5 = document.getElementById('card5');
-const card6 = document.getElementById('card6');
-const heading1 = document.getElementById('heading1');
-const heading2 = document.getElementById('heading2');
-const heading3 = document.getElementById('heading3');
-const headings = document.getElementById('headings');
-const heading4 = document.getElementById('heading4');
-const end = document.getElementById('end');
+function computer_move() {
+  const computerMove = Math.random();
 
-card1.onclick = function rock() {
-  let rand = Math.random();
-  if (rand <= 0.33) {
-    card2.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
-    card4.style.display = 'flex';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "TIE"
-  }
-
-  else if (rand <= 0.7) {
-    card2.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
-    card5.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "LOSE"
-  }
-
-  else {
-    card2.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
-    card6.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "WIN"
-  }
-  card1.style.pointerEvents = 'none';
-  end.style.display = "flex";
+  if (computerMove < 0.35)
+    return 'rock';
+  else if (computerMove < 0.7)
+    return 'paper';
+  else
+    return 'scissor';
 }
 
-card2.onclick = function paper() {
-  let rand = Math.random();
-  if (rand <= 0.33) {
-    card1.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+let move_heading = document.getElementById('move-heading');
+let end = document.getElementById('end');
+let option_heading = document.getElementById('option-heading');
+let cards_container = document.getElementById('cards-container');
+let card1 = document.getElementById('card1');
+let card2 = document.getElementById('card2');
+let card3 = document.getElementById('card3');
+let card4 = document.getElementById('card4');
+let card5 = document.getElementById('card5');
+let card6 = document.getElementById('card6');
+
+function rock() {
+
+  card2.style.display = 'none';
+  card3.style.display = 'none';
+  const computerMove = computer_move();
+  cards_container.style.pointerEvents = 'none';
+  option_heading.style.display = 'none';
+  move_heading.style.display = 'flex';
+  end.style.display = 'flex';
+
+  if (computerMove === 'rock') {
+    document.querySelector('.status').textContent = 'TIE..!';
     card4.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "WIN"
   }
-
-  else if (rand <= 0.7) {
-    card1.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+  else if (computerMove === 'paper') {
+    document.querySelector('.status').textContent = 'YOU LOSE..!';
     card5.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "TIE"
   }
-
   else {
-    card1.style.display = 'none';
-    card3.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+    document.querySelector('.status').textContent = 'YOU WIN..!';
     card6.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "LOSE  "
   }
-  card2.style.pointerEvents = 'none';
-  end.style.display = "flex";
 }
 
-card3.onclick = function scissor() {
-  let rand = Math.random();
-  if (rand <= 0.33) {
-    card2.style.display = 'none';
-    card1.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+function paper() {
+  card1.style.display = 'none';
+  card3.style.display = 'none';
+  const computerMove = computer_move();
+  cards_container.style.pointerEvents = 'none';
+  option_heading.style.display = 'none';
+  move_heading.style.display = 'flex';
+  end.style.display = 'flex';
+
+  if (computerMove === 'rock') {
+    document.querySelector('.status').textContent = 'YOU WIN..!';
     card4.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "LOSE"
   }
-
-  else if (rand <= 0.7) {
-    card2.style.display = 'none';
-    card1.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+  else if (computerMove === 'paper') {
+    document.querySelector('.status').textContent = 'TIE..!';
     card5.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "WIN"
   }
-
   else {
-    card2.style.display = 'none';
-    card1.style.display = 'none';
-    heading1.style.display = 'none';
-    heading2.style.display = 'block';
-    heading3.style.display = 'block';
-    heading2.innerHTML = 'Your Move :-';
-    heading3.innerHTML = "Computer's mover :-";
+    document.querySelector('.status').textContent = 'YOU LOSE..!';
     card6.style.display = 'flex';
-    card1.style.pointerEvents = 'none';
-    headings.style.display = "flex";
-    heading4.style.display = "block";
-    heading4.innerHTML = "TIE"
   }
-  card3.style.pointerEvents = 'none';
-  end.style.display = "flex";
+}
+
+function scissor() {
+  card1.style.display = 'none';
+  card2.style.display = 'none';
+  const computerMove = computer_move();
+  cards_container.style.pointerEvents = 'none';
+  option_heading.style.display = 'none';
+  move_heading.style.display = 'flex';
+  end.style.display = 'flex';
+
+  if (computerMove === 'rock') {
+    document.querySelector('.status').textContent = 'YOU LOSE..!';
+    card4.style.display = 'flex';
+  }
+  else if (computerMove === 'paper') {
+    document.querySelector('.status').textContent = 'YOU WIN..!';
+    card5.style.display = 'flex';
+  }
+  else {
+    document.querySelector('.status').textContent = 'TIE..!';
+    card6.style.display = 'flex';
+  }
 }

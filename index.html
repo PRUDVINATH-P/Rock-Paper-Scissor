@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RockPaperScissor</title>
   <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="images/logo.png" type="png">
 </head>
-<body>
-  <div class="logoo">
-    <a href="index.html"><img class = "logo" src="images/logo.png" alt=""></a>
-    <a href="index.html"><p class = "text">R-P-S</p></a>
-    
-  </div>
-  <h1 class = "h1">WelCome to Rock Paper Scissor Game</h1>
-  <h2 id = "heading1">Select your option :-</h2>
-  <div id="headings">
-    <h2  id = "heading2"></h2>
-    <h2  id = "heading3"></h2>
-  </div>
-  <div class="ur-cards">
-    <div id="card1" >
-      <img src="images/rock.png" alt="">
-      <p>ROCK</p>
-    </div>
-    <div id="card2">
-      <img src="images/paper.png" alt="">
-      <p>PAPER</p>
-    </div>
-    <div id="card3">
-      <img src="images/scissor.png" alt="">
-      <p>SCISSOR</p>
-    </div>
-    <div id="card4" >
-      <img src="images/rock.png" alt="">
-      <p>ROCK</p>
-    </div>
-    <div id="card5">
-      <img src="images/paper.png" alt="">
-      <p>PAPER</p>
-    </div>
-    <div id="card6">
-      <img src="images/scissor.png" alt="">
-      <p>SCISSOR</p>
-    </div>
-  </div>
-  <div id = "end">
-    <h1 id = "heading4">WIN</h1>
-    <a href="index.html"><button>Play Again</button></a>
-  </div>
-  
 
-  <script src = "r-p-s.js">
-    
+<body>
+  <p class="heading">Welcome to<b>&nbsp;ROCK PAPER SCISSOR&nbsp;</b>Game</p>
+  <div class="option-heading" id="option-heading">
+    <h2>Select Your Option :-</h2>
+  </div>
+  <div class="move-heading" id="move-heading">
+    <h2 class="our">Your Move :-</h2>
+    <h2 class="computer">Computer's Move :-</h2>
+  </div>
+  <div class="cards-container" id="cards-container">
+    <div class="card1" onclick="rock()" id="card1">
+      <img src="images/rock.png" alt="rock-image">
+      <h2>ROCK</h2>
+    </div>
+    <div class="card2" onclick="paper()" id="card2">
+      <img src="images/paper.png" alt="paper-image">
+      <h2>PAPER</h2>
+    </div>
+    <div class="card3" onclick="scissor()" id="card3">
+      <img src="images/scissor.png" alt="scissor-image">
+      <h2>SCISSOR</h2>
+    </div>
+
+    <div class="card4" id="card4">
+      <img src="images/rock.png" alt="rock-image">
+      <h2>ROCK</h2>
+    </div>
+    <div class="card5" id="card5">
+      <img src="images/paper.png" alt="paper-image">
+      <h2>PAPER</h2>
+    </div>
+    <div class="card6" id="card6">
+      <img src="images/scissor.png" alt="scissor-image">
+      <h2>SCISSOR</h2>
+    </div>
+  </div>
+  <div class="end" id="end">
+    <h2 class="status"></h2>
+    <a href="index.html"><button class="replay">Play Again</button></a>
+  </div>
+
+  <script src="r-p-s.js">
+
   </script>
 
 </body>
+
 </html>
